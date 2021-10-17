@@ -1,81 +1,93 @@
 #include<iostream> 
 using namespace std; 
-int top=-1; 
-const int MAX{10}; 
-int stackArr[MAX];
-void push(int item); 
-int pop(); 
-int peek(); 
-int isEmpty(); 
-int isFull(); 
-void display(); 
-int main()
-{ 
-	push(1); 
-	push(2); 
-	push(3); 
-	push(4); 
-	display(); 
-	cout<<"\n" ; 
-	pop(); 
-	push(7); 
-	cout<<"\n";
-        push(0);
-	peek(); 
-        peek(); 	
-	display(); 
-	return  0; 
-} 
-void push(int item)
+const int MAX{100};
+class Stack
+{
+	int top; 
+    public : 
+		int a[MAX]; // create an array with maximum size of 100 
+		// to hold the stack 
+		Stack(){top=-1;}// constructor for stack that creates an empty stack 
+		bool push(int x);
+		int pop();
+		int peek();
+		bool isEmpty();
+		bool isFull();
+		void display(); 
+
+};
+void Stack::display()
+{
+	if(isEmpty())
+	{
+		cout<<"Stack is Empty\n";
+		return; 
+	}
+	for(int i=top;i>=0;i--)
+	{
+		cout<<"||"<<a[i]<<"||\n";
+	}
+	cout<<"=====\n\n";
+}
+bool Stack::push(int item)
 {
 	// check overflow
-	if(isFull)
-	{ 
-		cout<<"Stack Overflow\n" ; 
-		return;  
-	} 
-	top=top+1; 
-	stackArr[top]=item; 
-} 
-int pop()
-{
-	// check underflow
-	if(isEmpty)
+	if(isFull())
 	{
-		cout<<"Stack UnderFlow\n"; 
-		exit(1); 
+		cout<<"Stack Overflow\n" ; 
+		return false;  
 	} 
-	int item{stackArr[top]}; 
-		--top; 
-		return item; 
+		a[++top]=item; 
+		cout<<item<<" pushed into stack\n";
+		return true;  
 }
-int peek()
+int Stack::pop()
 {
-     // check underflow 
-     if(isEmpty)
-     { 
-	     cout<<"Stack Underflow\n"; 
-	     exit(1); 
-     } 
-     int item{stackArr[top]}; 
-     return item; 
-} 
-int isEmpty()
-{
-      if(top==-1) return 1; 
-      else return 0; 
-} 
-int isFull()
-{
-	if(top==MAX-1) return 1; 
-	else return 0; 
-} 
-void display()
-{
-	if(isEmpty) 
-	{ 
-		cout<<"Stack is Empty" ;
-	} 
-	for(int i{0};i<MAX;i++)cout<<stackArr[i]<<"\n";
-} 
+	//check underflow condition 
+	if(isEmpty())
+	{
+		cout<<"Stack UnderFlow\n";
+		return 0; 
+	}
+	 
+		int item{a[top--]};
+		return item; 
 	
+}
+int Stack::peek()
+{
+	if(isEmpty())
+	{
+		cout<<"Stack UnderFlow\n";
+		return 0; 
+	}
+
+		return(a[top]);
+}
+bool Stack::isEmpty()
+{
+	if(top==-1)return true; 
+	else return false; 
+}
+bool Stack::isFull()
+{
+	if(top==MAX-1)return true; 
+	else return false; 
+}
+int main()
+{ 
+	class Stack  s; 
+	s.push(10);
+	s.push(20);
+	s.push(30);
+	cout<<"\n";
+	s.display(); 
+	cout<<s.pop()<<" popped from stack\n";
+	s.display(); 
+	cout<<s.pop()<<" popped from stack\n"; 
+	s.push(67);
+	cout<<"\n";
+	s.display();
+	return  0; 
+} 
+

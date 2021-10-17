@@ -21,4 +21,4 @@ int main()
     int n {}, initial{},x{};
     cin>>n>>initial>>x; 
     cout<<totalWays(n,initial,x);
-}
+} 

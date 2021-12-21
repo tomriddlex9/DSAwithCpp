@@ -1,4 +1,5 @@
 #include<iostream> 
+#define PLL printLinkedList(head)
 using namespace std; 
 class Node
 {
@@ -33,7 +34,7 @@ void insertAtEnd(Node ** head_ref,int new_data)
     Node *newnode=new Node(new_data);
     Node *last=*head_ref; 
     newnode->next=NULL; 
-    if(*head_ref=NULL)
+    if(*head_ref==NULL)
     {
         *head_ref=newnode; 
         return ;
@@ -54,18 +55,22 @@ void printLinkedList(Node *n)
         cout<<(n->data)<<" ";
         n=n->next; 
     }
+    cout<<"\n";
 
 }
 
 int main()
 {
     Node *head=new Node(2);
+    PLL; 
     pushToFront(&head,1);
-    printLinkedList(head);
+    PLL;
     pushToFront(&head,0);
+    PLL;
     insertAtEnd(&head,4); 
-    insertAfterNode(head->next->next->next,3);
-    printLinkedList(head);
+    PLL;
+    insertAfterNode(head->next->next,3);
+    PLL;
     return 0; 
 
 

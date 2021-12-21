@@ -1,20 +1,15 @@
-#include <iostream>
-#include <algorithm> 
-#define printarray(array) for(auto &x:array)cout<<x<<" ";
+#include<iostream>
 using namespace std; 
-int main()
+void solution()
 {
- srand(time(0));
- int array[20];
- for(int i{0};i<20;i++)array[i]=rand()%1000; 
- cout<<"The unsorted array is : \n";
- printarray(array);
- sort(begin(array),end(array));
- cout<<"\nThe sorted array is : \n";
- printarray(array);
- int otherarray[]{45,453,675567,8,76};
- cout<<"\nThe other array is : ";
- printarray(otherarray);
- return 0; 
-
+    int a{},b{};
+    cin>>a>>b; 
+    cout<<"The sum of "<<a<<" and "<<b<<" is : "<<a+b<<"\n";
+}
+int main(int argc, char const *argv[])
+{
+    int tc; 
+    cin>>tc; 
+    while(tc--){solution();}
+    return 0;
 }

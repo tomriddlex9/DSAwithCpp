@@ -16,6 +16,28 @@ In computer science, an array data structure, or simply an array, is a data stru
 
 Arrays are used to implement mathematical vectors (single-dimension arrays) and matrices(multi-dimensional arrays), as well as other kind of rectangular tables. 
 
-  **Arrays are used to implement other data structures , such as lists, heaps, hash tables, deques, queues, stacks, strings etc. 
+  **Arrays are used to implement other data structures , such as lists, heaps, hash tables, deques, queues, stacks, strings etc.** 
 
   * Array based implementations of other data structures are frequently simple and space-efficient, requiring little space overhead, but may have poor space complexity, compared to tree-based data structures.
+
+  ## Arrays Topics : 
+  ---
+  **1. Array Rotations**
+
+  **2. Array Rearrangements**
+
+  **3. Searching and Sorting**
+
+  **4. Order Statistics**
+
+  **5. Optimization Problems**
+
+  **6. Matrix**
+
+  **7. Range Queries**
+
+  **8. Miscellaneous**
+
+---
+## **Programs** :
+  

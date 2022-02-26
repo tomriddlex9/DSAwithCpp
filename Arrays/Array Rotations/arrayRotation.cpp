@@ -55,7 +55,6 @@ int main()
     // one at a time to see the effect 
 
     onerightRotate(array,arraysize);
-
     //*******************************
     for(int x:array)
     {

@@ -1,13 +1,19 @@
 #include<iostream>
 #include<sstream>
 #include<cstdlib>
-countSetBits(int n){
-    
+using namespace std;
+int countSetBits(int n){
+   int counter{0}; 
+   while(n!=0){
+      if(n&1) counter++; 
+      n=n>>1;
+   }
+   return counter;
 }
 int main()
 {
    int n; 
-   countSetBits(n);
-   std::cout<<std::endl; 
+   cin>>n;
+   cout<<countSetBits(n)<<endl;
    return 0;
 }

@@ -7,7 +7,7 @@ using namespace std;
 // which proves that the k'th bit of our number was non zero or 1 
 
 void kthBitLeftShift(int n,int k){
-    if((n & (1<<(k-1)) )!= 0) cout<<"Yes";
+    if((n & (1<<(k-1)) )) cout<<"Yes";
     else cout<<"No";
 }
 

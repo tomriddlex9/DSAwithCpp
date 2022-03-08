@@ -21,7 +21,7 @@ void optimisedDivisors(int n){
         if(n%i==0) cout<<i<<" ";
     }
     for(;i>=1;i--){
-        if(n%i==0) cout<<i<<" ";
+        if(n%i==0) cout<<n/i<<" ";
     }
     cout<<endl;
 }

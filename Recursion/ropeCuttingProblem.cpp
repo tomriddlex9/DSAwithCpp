@@ -16,6 +16,7 @@ int ropeCutting(int n,int a,int b,int c){
 int main()
 {
     int n=5,a=2,b=3,c=5; 
+    // rope can be cut into piece of length 2 and 3 
     //cin>>n; 
     //cin>>a>>b>>c; 
     cout<<"Maximum number of pieces that the rope can be cut into is : "<<endl; 

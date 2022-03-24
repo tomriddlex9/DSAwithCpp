@@ -7,8 +7,14 @@
 #include<vector> 
 using namespace std;
 int ropeCutting(int n,int a,int b,int c){
+    // if we have completely cut the rope 
+    // this is our base case 
     if(n==0)return 0; 
+    // if it is not possible to cut the rope into a given 
+    // length then it is impossible thus -1 
     if(n<0) return -1; 
+    // else for each piece of rope that is left , try cutting the rope using any of the 
+    // given three sizes and find the size which returns maximum cuts 
     int res = max(ropeCutting(n-a,a,b,c),max(ropeCutting(n-b,a,b,c),ropeCutting(n-c,a,b,c)));
     if(res==-1 )return -1; 
     return res+1;   

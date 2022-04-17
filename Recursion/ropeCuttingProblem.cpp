@@ -1,7 +1,11 @@
 //given a rope of length "n" and three lengths a,b,c which are <=n
 // the task is to cut the rope into maximum possible pieces 
 // and give the number of maximum pieces that the rope can be cut into 
-// for n=5 , a=2, b=1,n=5 
+// for n=5 , a=2, b=1,n=5
+
+
+
+//// TC(n)=(3^n) 
 
 #include<iostream>
 #include<vector> 

@@ -7,6 +7,9 @@ using namespace std;
 // since the divisors only appears in pairs
 // so we have to find all the numbers that are squares of prime numbers
 
+
+
+// function that checks whether a given number is prime or not 
     bool isPrime(int x){
        
        if(x == 1){
@@ -34,14 +37,14 @@ using namespace std;
    {
        
        int count=0,perfect_sq = 1,i=3;
-       
+       // 1 4 9 16 
        while(perfect_sq <= N){
            if(isPrime(sqrt(perfect_sq))){
                count++;
            }
 
            perfect_sq += i;
-           i += 2;
+           i += 2; //  
        }
        
        return count;

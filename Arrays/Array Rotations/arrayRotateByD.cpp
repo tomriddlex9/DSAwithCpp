@@ -1,6 +1,7 @@
 #include<iostream>
 #include<sstream>
 #include<cstdlib>
+#include<ctime>
 using namespace std;
 
 // time complexity { t(n)=O(n) }
@@ -11,7 +12,7 @@ using namespace std;
 void rotateArrayByD(int array[],int n,int d)
 {
     int temparray[d];
-    // put the first d elements of the array to put in the end
+    // put the first d elements of the array in a temparray to put in the end
     for(int i=0;i<d;i++){
         temparray[i]=array[i];
     }
@@ -23,18 +24,26 @@ void rotateArrayByD(int array[],int n,int d)
         array[(n-d)+i]=temparray[i];
     }
 }
-
-void rotateArraybyJuggling(int array[0],int n,int d)
-{
-    for(int i=0;i<n;i++)
+void swapthem(int &a,int &b){
+    int temp{a};
+    a=b; 
+    b=temp;
+}
+void reverse(int array[],int low,int high){
+    while(low<high){
+        swapthem(array[low],array[high]); 
+        low++;
+        high--;
+    }
 }
 
+void rotateArraybyReversal(int array[],int n,int d)
+{
+    reverse(array,0,d-1); 
+    reverse(array,d,n-1); 
+    reverse(array,0,n-1); 
 
-
-
-
-
-
+}
 
 int main()
 {
@@ -54,7 +63,7 @@ int main()
         cout<< x <<" "; 
     }
     cout<<endl; 
-    rotateArrayByD(array,n,d);
+    rotateArraybyReversal(array,n,d);
     cout<<"Array after rotation is: "<<endl; 
     for(int x:array){
         cout<< x <<" ";

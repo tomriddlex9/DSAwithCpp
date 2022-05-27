@@ -1,9 +1,10 @@
 #include<iostream> 
 #include<vector>
-#define PI 3.141592653589
+#include<cmath>
+const double PI=atan(1)*4; 
 using namespace std; 
 int main(){ 
-    int r,a,b; 
+    long long r,a,b; 
     cin>>r>>a>>b; 
     int rad=1;
     vector<int>radius;

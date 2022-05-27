@@ -1,0 +1,10 @@
+## more questions to practise using the prefix sum technique : 
+
+0. Given "n" ranges , find the maximum appearting element in this range, if there
+are more than one maximum appearing elements than return the minimum of those 
+
+1. check if a given array can be divided into three parts with equal sum 
+
+2. check if there is a subarray with 0 sum . 
+
+3.Find the longest subarray with equal number of zeroes(0) and ones(1)

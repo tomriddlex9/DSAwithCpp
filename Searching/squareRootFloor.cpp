@@ -63,7 +63,7 @@ int squareRootOptimised(int n)
 }
 int main()
 {
-    int n{25};
+    int n{6179767};
     cout << squareRootNaive(n) << endl;
     cout << squareRootOptimised(n) << endl;
 }

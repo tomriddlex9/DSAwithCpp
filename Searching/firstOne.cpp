@@ -3,6 +3,7 @@ using namespace std;
 
 int firstOccurrence(int arr[], int n, int x)
 {
+    // traverse the array  
     for (int i = 0; i < n; i++)
         if (arr[i] == x)
             return i;

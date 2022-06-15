@@ -1,3 +1,9 @@
+// create a dynamic array in c using the malloc function
+// this approach is not as good as using vectors 
+// but is probably used internally in the creation of vector 
+// classes 
+
+
 #include<stdio.h> 
 #include<stdlib.h> 
 int main(){ 

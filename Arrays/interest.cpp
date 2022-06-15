@@ -1,12 +1,12 @@
+// random program to solve some mathematical 
+// problem 
+
+
 #include<iostream>
 using namespace std;
 
 // principal 10Lac 
 // interest rate = 0.675 
-
-
-
-
 
 int main()
 {

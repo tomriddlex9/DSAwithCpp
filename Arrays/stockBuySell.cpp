@@ -1,6 +1,5 @@
 #include <bits/stdc++.h>
 using namespace std;
-
 // recursive approach that creates a recursive binary tree for all possible pairs of value
 // where j>i and price[j]>price[i] , then creates two partitions to look for such pairs
 

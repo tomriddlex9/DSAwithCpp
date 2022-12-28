@@ -1,4 +1,4 @@
-# Data Structures and Algorithms with C++ , Rust and Go. 
+# DSA with cpp
 
 **The Repository is a collection of basic to advanced programs for learning Data Structures and Algorithms using the languages  C++,Rust and Go**
 
